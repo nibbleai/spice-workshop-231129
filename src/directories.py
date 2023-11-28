@@ -1,6 +1,8 @@
 from pathlib import Path
 from types import SimpleNamespace
 
+__all__ = ['directories']
+
 directories = SimpleNamespace()
 
 directories.root_dir = Path(__file__).resolve().parents[1]

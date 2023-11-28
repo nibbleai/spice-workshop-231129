@@ -2,24 +2,23 @@
 
 ## How to run the demo
 
+**⚠️ You need Python >= 3.8**
 
-1. Install dependencies
+0. Log on to [spice documentation](https://spice.ml/docs/get_started/install)
+
+1. Create a virtual env **with Python >= 3.8**, and activate
     ```bash
-    # 'EXTRA_INDEX_URL' will be provided.
-    pip install -r requirements.txt --extra-index-url=${EXTRA_INDEX_URL}
+    python -m venv .venv
+    source .venv/bin/activate
     ```
 
-2. Initialize spice store (Needs to be done only once)
-    ```
-    spice init store
-    ```
-
-3. Run the demo
+2. Install project and dependencies
+    - You can find the value of `EXTRA_INDEX_URL` on the [documentation](https://spice.ml/docs/get_started/install)
     ```bash
-    python -m src.main
+    python -m pip install -r requirements.txt --extra-index-url=${EXTRA_INDEX_URL}
+    python -m pip install -e .
     ```
 
-4. Check the UI
-    ```bash
-    spice ui
-    ```
+3. [OPTIONAL] Explore the [documentation]((https://spice.ml/docs/get_started/install))
+
+4. Wait for the workshop to start!
