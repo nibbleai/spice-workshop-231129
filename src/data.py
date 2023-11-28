@@ -9,7 +9,8 @@ __all__ = [
     'get_train_dataset', 'get_weather_data', 'train_test_split', 'get_target'
 ]
 
-TRAIN_TAXI_DATA_FILENAME = 'nyc-taxi-2015.csv'
+TRAIN_TAXI_DATA_FILENAME = 'train-2015.csv'
+LIVE_TAXI_DATA_FILENAME = 'live-2015.csv'
 WEATHER_DATA_FILENAME = 'nyc-weather-2015.csv'
 
 
@@ -17,6 +18,13 @@ def get_train_dataset():
     return pd.read_csv(
         directories.taxi_data_dir / TRAIN_TAXI_DATA_FILENAME,
         parse_dates=[TaxiColumn.PICKUP_TIME, TaxiColumn.DROPOFF_TIME]
+    )
+
+
+def get_live_dataset():
+    return pd.read_csv(
+        directories.taxi_data_dir / LIVE_TAXI_DATA_FILENAME,
+        parse_dates=[TaxiColumn.PICKUP_TIME]
     )
 
 

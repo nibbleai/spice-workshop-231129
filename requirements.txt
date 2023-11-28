@@ -3,3 +3,4 @@ scikit-learn==1.0.2
 ydata-profiling==4.6.1
 spice[full]
 httpx
+pytest
